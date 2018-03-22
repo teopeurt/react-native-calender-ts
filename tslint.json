@@ -1,7 +1,7 @@
 {
-  "extends": ["tslint:latest", "tslint-config-prettier", "tslint-immutable"],
+  "extends": ["tslint:latest", "tslint-config-prettier", "tslint-immutable", "tslint:recommended", "tslint-react"],
   "rules": {
-    "interface-name": [true, "never-prefix"],
+//    "interface-name": [true, "never-prefix"],
     // TODO: allow devDependencies only in **/*.spec.ts files:
     // waiting on https://github.com/palantir/tslint/pull/3708
     "no-implicit-dependencies": [true, "dev"],
@@ -10,25 +10,120 @@
     // Recommended built-in rules
     "no-var-keyword": true,
     "no-parameter-reassignment": true,
-    "typedef": [true, "call-signature"],
+//    "typedef": [true, "call-signature"],
 
     // Immutability rules
-    "readonly-keyword": true,
-    "readonly-array": true,
-    "no-let": true,
-    "no-object-mutation": true,
+//    "readonly-keyword": true,
+//    "readonly-array": true,
+//    "no-let": true,
+    "no-object-mutation": false,
     "no-delete": true,
     "no-method-signature": true,
 
+    "prefer-conditional-expression": false,
     // Functional style rules
-    "no-this": true,
-    "no-class": true,
-    "no-mixed-interface": true,
-    "no-expression-statement": [
-      true,
-      { "ignore-prefix": ["console.", "process.exit"] }
-    ],
-    "no-if-statement": true
+    "no-this": false,
+    "no-class": false,
+    "no-mixed-interface": false,
+//    "no-expression-statement": [
+//      true,
+//      { "ignore-prefix": ["console.", "process.exit"] }
+//    ],
+    "no-if-statement": false,
     /* end tslint-immutable rules */
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double"
+    ],
+    "ordered-imports": [
+      false
+    ],
+    "object-literal-sort-keys": false,
+    "arrow-parens": false,
+    "no-console": [
+      false
+    ],
+    "no-unused-expression": [true, "allow-fast-null-checks"],
+    "comment-format": [
+      false,
+      "check-space",
+      "check-uppercase"
+    ],
+    "semicolon": [
+      true,
+      "never",
+      "interfaces"
+    ],
+    "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
+    "no-shadowed-variable": false,
+    "align": false,
+    "ban": false,
+    "class-name": true,
+    "curly": true,
+    "eofline": true,
+    "forin": true,
+    "indent": [
+      true,
+      "spaces"
+    ],
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "jsdoc-format": true,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "label-position": true,
+    "max-line-length": [
+      true,
+      120
+    ],
+    "member-ordering": [
+      true,
+      "static-before-instance",
+      "variables-before-functions"
+    ],
+    "no-any": false,
+    "no-arg": true,
+    "no-switch-case-fall-through": true,
+    "switch-default": true,
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "typedef": [
+      true,
+      "parameter",
+      "property-declaration"
+    ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-module",
+      "check-operator",
+      "check-separator",
+      "check-type",
+      "check-typecast"
+    ],
+    "jsx-boolean-value": ["never"]
   }
 }
